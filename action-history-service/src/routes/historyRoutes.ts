@@ -16,8 +16,8 @@ router.post('/history', async (req, res) => {
 
 router.get('/history', async (req, res) => {
     const { shopId, plu, from, to, action } = req.query;
-    const page = parseInt(req.query.page as string, 10) || 1; // Convert page to a number or default to 1
-    const size = parseInt(req.query.size as string, 10) || 10; // Convert size to a number or default to 10
+    const page = parseInt(req.query.page as string, 10) || 1;
+    const size = parseInt(req.query.size as string, 10) || 10;
     const offset = (page - 1) * size;
 
     try {
